@@ -7,7 +7,7 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #1a1a1a;
     background-color: #ffffff;
 }
 
@@ -17,8 +17,14 @@ body {
     padding: 0 20px;
 }
 
+.container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* Navigation */
-.navbar {
+.nav {
     background: #fff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     position: fixed;
@@ -27,10 +33,7 @@ body {
     z-index: 1000;
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,6 +44,7 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: #7c3aed;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -49,58 +53,79 @@ body {
     gap: 20px;
 }
 
-#languageToggle {
+.nav-link {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #7c3aed;
+}
+
+.lang-switch {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     padding: 8px 16px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.9rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #64748b;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 6px;
     transition: all 0.3s ease;
 }
 
-.nav-link:hover, .nav-link.active {
-    color: #7c3aed;
-    background: #faf5ff;
+.lang-switch:hover {
+    background: #e2e8f0;
 }
 
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #faf5ff 0%, #ffffff 100%);
-    padding: 120px 0 80px;
+    padding: 140px 0 80px;
+    margin-top: 70px;
+}
+
+.hero-content {
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: #7c3aed;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
 }
 
 .hero-title {
     font-size: 3.5rem;
     font-weight: bold;
-    color: #1e293b;
-    margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    color: #7c3aed;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #64748b;
-    max-width: 600px;
-    margin: 0 auto 2rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
 }
 
-.cta-button {
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.btn-primary {
     background: #7c3aed;
     color: white;
     border: none;
@@ -110,31 +135,43 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
-    margin-bottom: 3rem;
 }
 
-.cta-button:hover {
+.btn-primary:hover {
     background: #6d28d9;
     transform: translateY(-2px);
 }
 
-.benefits {
+.platform-badge {
+    background: #10b981;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.hero-stats {
     display: flex;
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
 }
 
-.benefit-item {
+.stat-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
 }
 
-.benefit-icon {
+.stat-icon {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+}
+
+.stat-text {
+    font-weight: 600;
+    color: #374151;
 }
 
 /* Features Section */
@@ -146,19 +183,19 @@ body {
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    color: #1e293b;
+    color: #1a1a1a;
     margin-bottom: 3rem;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 }
 
 .feature-card {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -167,56 +204,152 @@ body {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 25px rgba(0,0,0,0.1);
 }
 
 .feature-icon {
     font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    color: #1a1a1a;
     margin-bottom: 1rem;
 }
 
-.feature-card h3 {
-    font-size: 1.3rem;
-    color: #1e293b;
-    margin-bottom: 1rem;
-}
-
-.feature-card p {
+.feature-description {
     color: #64748b;
     line-height: 1.6;
 }
 
-/* Science Section */
-.science {
+/* Benefits Section */
+.benefits {
     padding: 80px 0;
 }
 
-.science-grid {
+.section-subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #64748b;
+    margin-bottom: 3rem;
+}
+
+.benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.science-item {
-    padding: 1.5rem;
-    border-left: 4px solid #7c3aed;
+.benefit-item {
     background: #faf5ff;
-    border-radius: 0 8px 8px 0;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #7c3aed;
 }
 
-.science-item h3 {
-    color: #1e293b;
-    margin-bottom: 0.5rem;
+.benefit-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7c3aed;
+    margin-bottom: 1rem;
 }
 
-.science-item p {
+.benefit-title {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.benefit-text {
     color: #64748b;
+    line-height: 1.6;
+}
+
+/* Dashboard Section */
+.dashboard {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.dashboard-description {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.dashboard-features {
+    list-style: none;
+}
+
+.dashboard-features li {
+    padding: 0.5rem 0;
+    color: #64748b;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.dashboard-features li:before {
+    content: "✓";
+    color: #7c3aed;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.dashboard-visual {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.chart-placeholder {
+    display: flex;
+    align-items: end;
+    gap: 0.5rem;
+    height: 120px;
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.chart-bar {
+    flex: 1;
+    background: #7c3aed;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.3s ease;
+}
+
+.streak-display {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7c3aed;
+    text-align: center;
 }
 
 /* FAQ Section */
 .faq {
     padding: 80px 0;
-    background: #f8fafc;
 }
 
 .faq-list {
@@ -230,6 +363,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
 }
 
 .faq-question {
@@ -240,11 +374,26 @@ body {
     text-align: left;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #1e293b;
+    color: #1a1a1a;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f8fafc;
+}
+
+.faq-question:after {
+    content: "+";
+    font-size: 1.5rem;
+    color: #64748b;
+}
+
+.faq-question.active:after {
+    content: "-";
 }
 
 .faq-answer {
@@ -252,52 +401,187 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    color: #64748b;
+    line-height: 1.6;
 }
 
 .faq-answer.active {
     padding: 0 1.5rem 1.5rem;
-    max-height: 200px;
+    max-height: 500px;
 }
 
 /* Footer */
 .footer {
-    background: #1e293b;
+    background: #1a1a1a;
     color: white;
-    padding: 2rem 0;
-    text-align: center;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-tagline {
+    color: #cbd5e1;
+    margin-top: 0.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
 }
 
 .footer-link {
     color: #cbd5e1;
     text-decoration: none;
-    margin-top: 1rem;
-    display: inline-block;
+    transition: color 0.3s ease;
 }
 
 .footer-link:hover {
     color: white;
 }
 
-/* Responsive */
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+    color: #9ca3af;
+}
+
+/* Privacy Policy Styles */
+.privacy-section {
+    padding: 140px 0 80px;
+    margin-top: 70px;
+}
+
+.privacy-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.privacy-title {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.privacy-date {
+    color: #64748b;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.privacy-intro {
+    font-size: 1.1rem;
+    color: #374151;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.privacy-highlight {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+    font-weight: 600;
+}
+
+.privacy-subtitle {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.privacy-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.privacy-list li {
+    padding: 0.5rem 0;
+    color: #374151;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.privacy-list li:before {
+    content: "•";
+    color: #7c3aed;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.privacy-emphasis {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #7c3aed;
+    font-weight: 600;
+    margin: 1.5rem 0;
+}
+
+.privacy-link {
+    color: #7c3aed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
     }
     
-    .hero-subtitle {
-        font-size: 1.2rem;
+    .hero-description {
+        font-size: 1.1rem;
     }
     
-    .benefits {
+    .hero-cta {
+        flex-direction: column;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-content {
+        grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
     }
     
     .nav-links {
         gap: 10px;
     }
     
-    #languageToggle {
-        padding: 6px 12px;
-        font-size: 0.8rem;
+    .privacy-content {
+        padding: 2rem;
+    }
+    
+    .privacy-title {
+        font-size: 2rem;
     }
 }
