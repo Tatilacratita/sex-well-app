@@ -3,131 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sex Well - Aplicație Sănătate Sexuală Android</title>
-    <meta name="description" content="Sex Well - Premium sexual health tracking app for Android. Science-backed wellness optimization. Private, secure, local storage.">
-    <link rel="stylesheet" href="style.css">
+    <title>Sex Well - Aplicație Sănătate Sexuală și Wellness | Android</title>
+    <meta name="description" content="Sex Well - Aplicație premium de tracking sănătate sexuală și wellness. Bazată pe știință medicală, cu jurnal privat, gamification și insights personalizate. Disponibil pe Android.">
+    <meta name="keywords" content="sexual health tracking app android, aplicație sănătate sexuală, wellness sexual, tracking intimitate, sănătate sexuală android">
+    <link rel="stylesheet" href="/src/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Sex Well</div>
-            <div class="nav-links">
-                <button id="languageToggle">RO/EN</button>
-                <a href="#home" class="nav-link active">Acasă</a>
-                <a href="#privacy" class="nav-link">Confidențialitate</a>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Sex Well</div>
+                <div class="nav-links">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#benefits" class="nav-link">Beneficii</a>
+                    <a href="#dashboard" class="nav-link">Dashboard</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="/privacy.html" class="nav-link">Privacy</a>
+                    <button class="lang-switch" id="langSwitch">EN</button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="container">
-            <h1 class="hero-title">Sex Well</h1>
-            <p class="hero-subtitle">Aplicație premium pentru tracking-ul sănătății sexuale</p>
-            <p class="hero-description">Bazat pe știință medicală. Privat. Securizat. Storage local.</p>
-            <button class="cta-button">Descarcă pentru Android</button>
-            
-            <div class="benefits">
-                <div class="benefit-item">
-                    <div class="benefit-icon">🔒</div>
-                    <span>Date locale</span>
+            <div class="hero-content">
+                <div class="hero-badge" data-ro="Sănătate Sexuală Optimizată" data-en="Optimized Sexual Health">Sănătate Sexuală Optimizată</div>
+                <h1 class="hero-title" data-ro="Wellness sexual bazat pe știință medicală" data-en="Science-backed sexual wellness">
+                    Wellness sexual bazat pe<br>știință medicală
+                </h1>
+                <p class="hero-description" data-ro="Aplicație premium de tracking sănătate sexuală. Datele tale rămân private, stocate local pe dispozitiv. Insights personalizate pentru o viață intimă mai sănătoasă." data-en="Premium sexual health tracking app. Your data stays private, stored locally on device. Personalized insights for a healthier intimate life.">
+                    Aplicație premium de tracking sănătate sexuală. Datele tale rămân private, stocate local pe dispozitiv. Insights personalizate pentru o viață intimă mai sănătoasă.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn-primary" data-ro="Descarcă aplicația" data-en="Download app">Descarcă aplicația</button>
+                    <span class="platform-badge">Android</span>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">📊</div>
-                    <span>Analize avansate</span>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">⚕️</div>
-                    <span>Bazat pe știință</span>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">🔒</div>
+                        <div class="stat-text" data-ro="100% Privat" data-en="100% Private">100% Privat</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🏥</div>
+                        <div class="stat-text" data-ro="Medical Backed" data-en="Medical Backed">Medical Backed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-text" data-ro="Insights Personalizate" data-en="Personalized Insights">Insights Personalizate</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Caracteristici Principale</h2>
+            <h2 class="section-title" data-ro="Funcționalități Premium" data-en="Premium Features">Funcționalități Premium</h2>
             <div class="features-grid">
                 <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3 class="feature-title" data-ro="Jurnal Privat" data-en="Private Journal">Jurnal Privat</h3>
+                    <p class="feature-description" data-ro="Înregistrează activități, satisfacție, stare emoțională și fizică. Stocare 100% locală, fără servere cloud." data-en="Record activities, satisfaction, emotional and physical state. 100% local storage, no cloud servers.">
+                        Înregistrează activități, satisfacție, stare emoțională și fizică. Stocare 100% locală, fără servere cloud.
+                    </p>
+                </div>
+                <div class="feature-card">
                     <div class="feature-icon">📈</div>
-                    <h3>Tracking Cuprinzător</h3>
-                    <p>Monitorizează-ți sănătatea sexuală cu metrici detaliate și personalizate</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h3>Securitate Maximă</h3>
-                    <p>Toate datele stocate local pe dispozitiv, fără cloud</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Interfață Intuitivă</h3>
-                    <p>Design minimalist și ușor de utilizat</p>
+                    <h3 class="feature-title" data-ro="Dashboard Insights" data-en="Dashboard Insights">Dashboard Insights</h3>
+                    <p class="feature-description" data-ro="Vizualizări grafice ale frecvenței, satisfacției, corelații cu stresul, activitatea fizică și sănătatea generală." data-en="Graphical views of frequency, satisfaction, correlations with stress, physical activity and general health.">
+                        Vizualizări grafice ale frecvenței, satisfacției, corelații cu stresul, activitatea fizică și sănătatea generală.
+                    </p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
-                    <h3>Recomandări Personalizate</h3>
-                    <p>Sfaturi bazate pe datele și obiectivele tale</p>
+                    <h3 class="feature-title" data-ro="Gamification" data-en="Gamification">Gamification</h3>
+                    <p class="feature-description" data-ro="Streak tracking, achievements, obiective personalizate pentru menținerea unei vieți intime sănătoase și constante." data-en="Streak tracking, achievements, personalized goals to maintain a healthy and consistent intimate life.">
+                        Streak tracking, achievements, obiective personalizate pentru menținerea unei vieți intime sănătoase și constante.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3 class="feature-title" data-ro="Securitate Maximă" data-en="Maximum Security">Securitate Maximă</h3>
+                    <p class="feature-description" data-ro="Blocare automată cu PIN sau biometrie. Re-autentificare obligatorie la revenire din background." data-en="Auto-lock with PIN or biometrics. Mandatory re-authentication when returning from background.">
+                        Blocare automată cu PIN sau biometrie. Re-autentificare obligatorie la revenire din background.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧬</div>
+                    <h3 class="feature-title" data-ro="Profil Wellness" data-en="Wellness Profile">Profil Wellness</h3>
+                    <p class="feature-description" data-ro="Tracking greutate, înălțime, nivel activitate fizică, stres și stare generală de sănătate pentru insights complete." data-en="Track weight, height, physical activity level, stress and general health for complete insights.">
+                        Tracking greutate, înălțime, nivel activitate fizică, stres și stare generală de sănătate pentru insights complete.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title" data-ro="Zero Tracking Extern" data-en="Zero External Tracking">Zero Tracking Extern</h3>
+                    <p class="feature-description" data-ro="Fără Google Analytics, fără Firebase, fără telemetrie. Datele tale nu părăsesc niciodată dispozitivul." data-en="No Google Analytics, no Firebase, no telemetry. Your data never leaves the device.">
+                        Fără Google Analytics, fără Firebase, fără telemetrie. Datele tale nu părăsesc niciodată dispozitivul.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Science Section -->
-    <section class="science">
+    <section id="benefits" class="benefits">
         <div class="container">
-            <h2 class="section-title">Bazat pe Știință Medicală</h2>
-            <div class="science-grid">
-                <div class="science-item">
-                    <h3>✓ Monitorizare Stare de Bine</h3>
-                    <p>Urmărește-ți energia, starea de spirit și vitalitatea</p>
+            <h2 class="section-title" data-ro="Beneficii Medicale și Științifice" data-en="Medical & Scientific Benefits">Beneficii Medicale și Științifice</h2>
+            <p class="section-subtitle" data-ro="Sănătatea sexuală este parte integrantă a wellness-ului general" data-en="Sexual health is an integral part of overall wellness">
+                Sănătatea sexuală este parte integrantă a wellness-ului general
+            </p>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-number">01</div>
+                    <h3 class="benefit-title" data-ro="Îmbunătățirea Sănătății Cardiovasculare" data-en="Improved Cardiovascular Health">Îmbunătățirea Sănătății Cardiovasculare</h3>
+                    <p class="benefit-text" data-ro="Activitatea sexuală regulată contribuie la reducerea tensiunii arteriale și îmbunătățirea circulației sanguine." data-en="Regular sexual activity contributes to reduced blood pressure and improved blood circulation.">
+                        Activitatea sexuală regulată contribuie la reducerea tensiunii arteriale și îmbunătățirea circulației sanguine.
+                    </p>
                 </div>
-                <div class="science-item">
-                    <h3>✓ Analize Trend</h3>
-                    <p>Identifică pattern-uri și corelații importante</p>
+                <div class="benefit-item">
+                    <div class="benefit-number">02</div>
+                    <h3 class="benefit-title" data-ro="Reducerea Stresului și Anxietății" data-en="Reduced Stress and Anxiety">Reducerea Stresului și Anxietății</h3>
+                    <p class="benefit-text" data-ro="Eliberarea de endorfine și oxitocină ajută la gestionarea stresului și îmbunătățirea stării mentale." data-en="Release of endorphins and oxytocin helps manage stress and improve mental state.">
+                        Eliberarea de endorfine și oxitocină ajută la gestionarea stresului și îmbunătățirea stării mentale.
+                    </p>
                 </div>
-                <div class="science-item">
-                    <h3>✓ Metrici Obiective</h3>
-                    <p>Parametri măsurabili pentru progres real</p>
+                <div class="benefit-item">
+                    <div class="benefit-number">03</div>
+                    <h3 class="benefit-title" data-ro="Întărirea Sistemului Imunitar" data-en="Strengthened Immune System">Întărirea Sistemului Imunitar</h3>
+                    <p class="benefit-text" data-ro="Studiile arată că activitatea sexuală regulată poate îmbunătăți funcția sistemului imunitar." data-en="Studies show that regular sexual activity can improve immune system function.">
+                        Studiile arată că activitatea sexuală regulată poate îmbunătăți funcția sistemului imunitar.
+                    </p>
                 </div>
-                <div class="science-item">
-                    <h3>✓ Confidențialitate Asigurată</h3>
-                    <p>Niciun serviciu cloud, toate datele rămân la tine</p>
+                <div class="benefit-item">
+                    <div class="benefit-number">04</div>
+                    <h3 class="benefit-title" data-ro="Conștientizare și Auto-cunoaștere" data-en="Awareness and Self-knowledge">Conștientizare și Auto-cunoaștere</h3>
+                    <p class="benefit-text" data-ro="Tracking-ul te ajută să identifici pattern-uri și factori care influențează sănătatea ta sexuală." data-en="Tracking helps you identify patterns and factors that influence your sexual health.">
+                        Tracking-ul te ajută să identifici pattern-uri și factori care influențează sănătatea ta sexuală.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq">
+    <section id="dashboard" class="dashboard">
         <div class="container">
-            <h2 class="section-title">Întrebări Frecvente</h2>
+            <div class="dashboard-content">
+                <div class="dashboard-text">
+                    <h2 class="section-title" data-ro="Dashboard Inteligent" data-en="Smart Dashboard">Dashboard Inteligent</h2>
+                    <p class="dashboard-description" data-ro="Vizualizează toate datele tale într-un dashboard clar și intuitive. Înțelege corelațiile dintre activitatea sexuală, stres, activitate fizică și starea generală de sănătate." data-en="View all your data in a clear and intuitive dashboard. Understand correlations between sexual activity, stress, physical activity and general health.">
+                        Vizualizează toate datele tale într-un dashboard clar și intuitive. Înțelege corelațiile dintre activitatea sexuală, stres, activitate fizică și starea generală de sănătate.
+                    </p>
+                    <ul class="dashboard-features">
+                        <li data-ro="Grafice interactive de frecvență și satisfacție" data-en="Interactive frequency and satisfaction charts">Grafice interactive de frecvență și satisfacție</li>
+                        <li data-ro="Streak tracking pentru menținerea consistenței" data-en="Streak tracking to maintain consistency">Streak tracking pentru menținerea consistenței</li>
+                        <li data-ro="Achievements și milestone-uri personalizate" data-en="Personalized achievements and milestones">Achievements și milestone-uri personalizate</li>
+                        <li data-ro="Export date pentru consultații medicale" data-en="Data export for medical consultations">Export date pentru consultații medicale</li>
+                    </ul>
+                </div>
+                <div class="dashboard-visual">
+                    <div class="dashboard-card">
+                        <div class="card-header" data-ro="Activitate Lunară" data-en="Monthly Activity">Activitate Lunară</div>
+                        <div class="chart-placeholder">
+                            <div class="chart-bar" style="height: 60%"></div>
+                            <div class="chart-bar" style="height: 80%"></div>
+                            <div class="chart-bar" style="height: 70%"></div>
+                            <div class="chart-bar" style="height: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="card-header" data-ro="Streak Actual" data-en="Current Streak">Streak Actual</div>
+                        <div class="streak-display">7 zile</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title" data-ro="Întrebări Frecvente" data-en="Frequently Asked Questions">Întrebări Frecvente</h2>
             <div class="faq-list">
                 <div class="faq-item">
-                    <button class="faq-question">Cum sunt protejate datele mele?</button>
-                    <div class="faq-answer">
-                        <p>Toate datele sunt stocate exclusiv pe dispozitivul tău. Nu folosim servicii cloud și nu colectăm date personale.</p>
+                    <div class="faq-question" data-ro="Datele mele sunt cu adevărat sigure?" data-en="Is my data really secure?">Datele mele sunt cu adevărat sigure?</div>
+                    <div class="faq-answer" data-ro="Da. Sex Well funcționează 100% local pe dispozitivul tău. Nu trimitem niciun fel de date către servere externe. Aplicația este protejată cu PIN sau biometrie și se blochează automat." data-en="Yes. Sex Well works 100% locally on your device. We do not send any data to external servers. The app is protected with PIN or biometrics and locks automatically.">
+                        Da. Sex Well funcționează 100% local pe dispozitivul tău. Nu trimitem niciun fel de date către servere externe. Aplicația este protejată cu PIN sau biometrie și se blochează automat.
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">Este aplicația gratuită?</button>
-                    <div class="faq-answer">
-                        <p>Oferim o versiune de bază gratuită cu funcționalități esențiale. Versiunea premium include analize avansate și tracking detaliat.</p>
+                    <div class="faq-question" data-ro="Ce date sunt colectate?" data-en="What data is collected?">Ce date sunt colectate?</div>
+                    <div class="faq-answer" data-ro="Doar datele pe care tu le introduci manual: nume, vârstă, gen, greutate, înălțime, nivel activitate fizică, stres, stare de sănătate și înregistrările din jurnal. Nimic nu este trimis automat." data-en="Only data you manually enter: name, age, gender, weight, height, physical activity level, stress, health status and journal entries. Nothing is sent automatically.">
+                        Doar datele pe care tu le introduci manual: nume, vârstă, gen, greutate, înălțime, nivel activitate fizică, stres, stare de sănătate și înregistrările din jurnal. Nimic nu este trimis automat.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" data-ro="Pentru cine este această aplicație?" data-en="Who is this app for?">Pentru cine este această aplicație?</div>
+                    <div class="faq-answer" data-ro="Sex Well este pentru adulți care doresc să-și monitorizeze și optimizeze sănătatea sexuală într-un mod științific, privat și non-vulgar. Este o aplicație wellness, nu de divertisment." data-en="Sex Well is for adults who want to monitor and optimize their sexual health in a scientific, private and non-vulgar way. It is a wellness app, not entertainment.">
+                        Sex Well este pentru adulți care doresc să-și monitorizeze și optimizeze sănătatea sexuală într-un mod științific, privat și non-vulgar. Este o aplicație wellness, nu de divertisment.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" data-ro="Aplicația folosește AI sau trimite date către Google?" data-en="Does the app use AI or send data to Google?">Aplicația folosește AI sau trimite date către Google?</div>
+                    <div class="faq-answer" data-ro="Nu. Sex Well nu folosește Google Analytics, Firebase Analytics sau alte servicii de tracking. Nu există telemetrie, nu există AI cloud. Tot procesul este local." data-en="No. Sex Well does not use Google Analytics, Firebase Analytics or other tracking services. There is no telemetry, no cloud AI. Everything is local.">
+                        Nu. Sex Well nu folosește Google Analytics, Firebase Analytics sau alte servicii de tracking. Nu există telemetrie, nu există AI cloud. Tot procesul este local.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" data-ro="Cum pot șterge datele mele?" data-en="How can I delete my data?">Cum pot șterge datele mele?</div>
+                    <div class="faq-answer" data-ro="Prin dezinstalarea aplicației. Deoarece toate datele sunt stocate doar local pe dispozitivul tău, dezinstalarea aplicației șterge complet toate informațiile." data-en="By uninstalling the app. Since all data is stored only locally on your device, uninstalling the app completely deletes all information.">
+                        Prin dezinstalarea aplicației. Deoarece toate datele sunt stocate doar local pe dispozitivul tău, dezinstalarea aplicației șterge complet toate informațiile.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Sex Well. Toate drepturile rezervate.</p>
-            <a href="#privacy" class="footer-link">Politica de Confidențialitate</a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Sex Well</div>
+                    <p class="footer-tagline" data-ro="Wellness sexual bazat pe știință" data-en="Science-backed sexual wellness">Wellness sexual bazat pe știință</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html" class="footer-link" data-ro="Politica de Confidențialitate" data-en="Privacy Policy">Politica de Confidențialitate</a>
+                    <a href="mailto:tatilacratita@gmail.com" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sex Well. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/src/script.js"></script>
 </body>
 </html>
